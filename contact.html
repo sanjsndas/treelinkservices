@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | TreeLink Services</title>
+    <style>
+        :root {
+            --primary-color: #2c4a3a;
+            --secondary-color: #5a7f5e;
+            --accent-color: #8ba888;
+            --light-color: #f0f4ef;
+            --dark-color: #1a2e1f;
+            --text-color: #333;
+            --highlight-color: #c9e4ca;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1476231682824-1248f1a78905?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--light-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slogan {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        nav a[aria-current="page"] {
+            background-color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .info-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-point {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-point h3 {
+            color: var(--secondary-color);
+        }
+
+        .map-container {
+            height: 400px;
+            margin-top: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .office-hours {
+            margin-top: 2rem;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .hours-table th, .hours-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table th {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-contact {
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+
+            header {
+                min-height: 40vh;
+            }
+
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TreeLink Services</div>
+        <div class="slogan">"Guardians of your greens."</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li><a href="privacy.html" tabindex="0">Privacy</a></li>
+            <li><a href="terms.html" tabindex="0">Terms & conditions</a></li>
+            <li><a href="cookies.html" tabindex="0">Cookies</a></li>
+            <li><a href="contact.html" tabindex="0" aria-current="page">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="contact-form-section">
+            <h1>Contact TreeLink Services</h1>
+            <p>Have questions about our tree care services? Our team of certified arborists is ready to assist you. Fill out the form below or contact us directly using the information provided.</p>
+            
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="tree-care">Tree Care & Maintenance</option>
+                        <option value="tree-removal">Tree Removal</option>
+                        <option value="tree-health">Tree Health Assessment</option>
+                        <option value="emergency-services">Emergency Services</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="property-type">Property Type</label>
+                    <select id="property-type" name="property-type">
+                        <option value="">Select property type</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="municipal">Municipal/Public</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <div class="form-group full-width">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="contact-info-section">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>251 Mercer St<br>New York, NY 10012, USA</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>Main: (123) 456-7890<br>Emergency: (123) 456-7891</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>General: info@treelinkservices.com<br>Support: support@treelinkservices.com</p>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2152580754365!2d-73.9964659244716!3d40.72877227138852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25990934a8d71%3A0xad6a0e0c1a4a2f44!2s251%20Mercer%20St%2C%20New%20York%2C%20NY%2010012%2C%20USA!5e0!3m2!1sen!2sin!4v1686235677879!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div class="office-hours">
+                <h2>Office Hours</h2>
+                <table class="hours-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday - Friday</td>
+                            <td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>9:00 AM - 4:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Emergency Services Only</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="contact-details">
+            <h1>Detailed Contact Information</h1>
+            
+            <div class="contact-point">
+                <h3>1. Customer Service</h3>
+                <p>Our customer service team is available during business hours to answer general inquiries, schedule appointments, and provide information about our services. You can reach them by phone, email, or through our online contact form. Our representatives are trained to assist with a wide range of tree care questions and can connect you with the appropriate specialist if needed.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>2. Emergency Services</h3>
+                <p>For storm damage, fallen trees, or other urgent tree-related emergencies, our 24/7 emergency hotline is available at (123) 456-7891. Our emergency response team includes certified arborists and trained professionals prepared to handle hazardous situations safely and efficiently. When calling, please provide as many details as possible about the emergency situation.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>3. Estimating Department</h3>
+                <p>To request a free estimate for tree services, please contact our estimating department at estimates@treelinkservices.com or call (123) 456-7892. Our estimators will schedule an on-site assessment to provide an accurate quote based on your specific needs. Estimates typically include a detailed breakdown of services, pricing, and an estimated timeline for completion.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>4. Accounts Receivable</h3>
+                <p>For billing inquiries, payment processing, or account questions, please contact our accounts receivable department at accounts@treelinkservices.com or (123) 456-7893. We accept various payment methods including credit cards, checks, and electronic transfers. Payment plans may be available for larger projects upon request and approval.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>5. Human Resources</h3>
+                <p>For employment inquiries, job applications, or HR-related matters, please contact our human resources department at careers@treelinkservices.com or (123) 456-7894. We're always looking for skilled arborists, tree care specialists, and support staff to join our team. Current job openings and application instructions are available on our website.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>6. Sales Department</h3>
+                <p>For commercial clients, municipal contracts, or large-scale projects, our sales team can be reached at sales@treelinkservices.com or (123) 456-7895. We offer customized tree care programs for property managers, developers, and government agencies, with volume discounts available for ongoing service agreements.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3 >7. Technical Support</h3>
+                <p>If you experience any issues with our website or online services, please reach out to our technical support team at support@treelinkservices.com or call (123) 456-7896. Our tech support staff is available to assist with troubleshooting, account access issues, and any technical questions you may have regarding our online platforms.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>8. Community Outreach</h3>
+                <p>TreeLink Services is committed to giving back to the community. For inquiries about our community programs, partnerships, or sponsorship opportunities, please contact our outreach coordinator at outreach@treelinkservices.com. We actively participate in local events and initiatives aimed at promoting environmental awareness and tree conservation.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>9. Customer Feedback</h3>
+                <p>Your feedback is important to us! If you have suggestions, comments, or concerns about our services, please share them with us at feedback@treelinkservices.com. We value your input and strive to improve our services based on customer experiences. Your feedback helps us enhance our offerings and customer satisfaction.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>10. Service Areas</h3>
+                <p>We provide tree care services across various regions. For specific inquiries about service availability in your area, please contact us at serviceareas@treelinkservices.com. Our team can provide information on the areas we serve and any potential travel fees for locations outside our standard service zones.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>11. Tree Care Tips</h3>
+                <p>For general tree care advice, maintenance tips, and seasonal recommendations, visit our blog or contact us at tips@treelinkservices.com. Our certified arborists regularly share insights on tree health, pest management, and best practices for maintaining your landscape. We aim to educate our customers on proper tree care techniques.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>12. Tree Planting Services</h3>
+                <p>If you're interested in tree planting services, please reach out to us at planting@treelinkservices.com. Our team can assist with selecting the right species for your property, site preparation, and planting techniques to ensure successful growth. We also offer maintenance plans for newly planted trees.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>13. Tree Health Assessments</h3>
+                <p>For concerns about the health of your trees, our arborists can conduct thorough assessments. Contact us at healthassessments@treelinkservices.com to schedule an evaluation. We will provide a detailed report on the condition of your trees and recommend appropriate care or treatment options.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>14. Tree Removal Services</h3>
+                <p>For tree removal inquiries, please contact us at treeremoval@treelinkservices.com. Our team is experienced in safely removing trees of all sizes, including those in challenging locations. We prioritize safety and environmental considerations during the removal process.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>15. Arborist Consultations</h3>
+                <p>If you need expert advice on tree care or landscape planning, schedule a consultation with one of our certified arborists by contacting consultations@treelinkservices.com. We offer personalized consultations to address your specific needs and provide tailored recommendations for your property.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>16. Seasonal Services</h3>
+                <p>We offer seasonal services such as pruning, fertilization, and pest control. For more information, please reach out to seasonalservices@treelinkservices.com. Our team can help you prepare your trees for changing weather conditions and ensure they remain healthy year-round.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>17. Tree Preservation</h3>
+                <p>For inquiries about tree preservation techniques and services, contact us at preservation@treelinkservices.com. We specialize in methods to protect and maintain mature trees, ensuring their longevity and health in urban environments.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>18. Tree Inventory Services</h3>
+                <p>For municipalities or organizations needing tree inventory assessments, please reach out to us at inventory@treelinkservices.com. We provide comprehensive tree inventory services, including mapping, health assessments, and management recommendations.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>19. Tree Risk Assessments</h3>
+                <p>For concerns about tree safety and risk, our arborists can conduct risk assessments. Contact us at riskassessments@treelinkservices.com to schedule an evaluation. We will identify potential hazards and recommend appropriate actions to mitigate risks.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>20. Educational Workshops</h3>
+                <p>We offer educational workshops on tree care and maintenance for schools, community groups, and organizations. For more information, please contact us at workshops@treelinkservices.com. Our workshops aim to promote awareness and understanding of tree care practices.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>21. Volunteer Opportunities</h3>
+                <p>If you're interested in volunteering with TreeLink Services, please reach out to us at volunteer@treelinkservices.com. We welcome community members to participate in tree planting events, educational programs, and conservation efforts.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>22. Sponsorship Requests</h3>
+                <p>For sponsorship inquiries related to community events or initiatives, please contact us at sponsorships@treelinkservices.com. We are committed to supporting local efforts that align with our mission of promoting tree care and environmental stewardship.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>23. Partnerships</h3>
+                <p>If you're interested in partnering with TreeLink Services for projects or initiatives, please reach out to us at partnerships@treelinkservices.com. We are open to collaborations that enhance our services and benefit the community.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>24. Media Inquiries</h3>
+                <p>For media inquiries, interviews, or press releases, please contact us at media@treelinkservices.com. We are happy to provide information about our services, community involvement, and industry insights.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>25. Tree Care Resources</h3>
+                <p>For additional resources on tree care, including articles, guides, and videos, visit our website or contact us at resources@treelinkservices.com. We aim to provide valuable information to help you care for your trees effectively.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>26. Tree Species Information</h3>
+                <p>If you're looking for information on specific tree species, please reach out to us at speciesinfo@treelinkservices.com. Our arborists can provide insights on tree characteristics, care requirements, and suitability for your landscape.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>27. Pest Management</h3>
+                <p>For inquiries about pest management services for your trees, contact us at pestmanagement@treelinkservices.com. We offer integrated pest management solutions to protect your trees from harmful pests and diseases.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>28. Fertilization Services</h3>
+                <p>For information on our fertilization services, please reach out to us at fertilization@treelinkservices.com. We provide soil testing and customized fertilization plans to promote healthy tree growth and vitality.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>29. Tree Pruning Services</h3>
+                <p>For inquiries about tree pruning services, contact us at pruning@treelinkservices.com. Our certified arborists are trained in proper pruning techniques to enhance tree health and aesthetics.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>30. Tree Removal Safety</h3>
+                <p>For questions about the safety measures we take during tree removal, please reach out to us at removalsafety@treelinkservices.com. We prioritize safety for our team and your property during all removal operations.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>31. Tree Care FAQs</h3>
+                <p>If you have frequently asked questions about tree care, please contact us at faqs@treelinkservices.com. We are happy to provide answers and resources to help you better understand tree maintenance.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>32. Tree Care Blog</h3>
+                <p>For updates on our blog, including tips and articles about tree care, please reach out to us at blog@treelinkservices.com. We regularly post new content to keep our customers informed and engaged.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>33. Tree Conservation Efforts</h3>
+                <p>For inquiries about our tree conservation efforts and initiatives, please contact us at conservation@treelinkservices.com. We are dedicated to promoting sustainable practices and protecting our natural resources.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>34. Tree Care Workshops</h3>
+                <p>If you're interested in hosting a tree care workshop, please reach out to us at workshops@treelinkservices.com. We can provide materials and support for educational events in your community.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>35. Tree Planting Events</h3>
+                <p>For information about upcoming tree planting events, please contact us at plantingevents@treelinkservices.com. We welcome volunteers and community members to join us in our efforts to enhance local green spaces.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>36. Tree Health Monitoring</h3>
+                <p>For inquiries about our tree health monitoring services, please reach out to us at healthmonitoring@treelinkservices.com. We offer ongoing assessments to ensure the long-term health of your trees.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>37. Tree Care Certifications</h3>
+                <p>If you're interested in learning about our certifications and qualifications, please contact us at certifications@treelinkservices.com. We are proud to hold various industry certifications that demonstrate our commitment to excellence.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>38. Tree Care Partnerships</h3>
+                <p>For inquiries about potential partnerships in tree care initiatives, please reach out to us at partnerships@treelinkservices.com. We are open to collaborating with organizations that share our mission of promoting tree health and sustainability.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>39. Tree Care Resources for Schools</h3>
+                <p>If you're a school looking for tree care resources or educational materials, please contact us at schools@treelinkservices.com. We offer programs and materials to help educate students about the importance of trees and conservation.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>40. General Inquiries</h3>
+                <p>For any other inquiries not covered above, please feel free to contact us at info@treelinkservices.com. We are here to assist you with any questions or concerns you may have regarding our services.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 TreeLink Services. All rights reserved.</p>
+            <div class="footer-contact">
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>251 Mercer St, New York, NY 10012, USA</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>(123) 456-7890</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

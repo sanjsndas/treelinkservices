@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | TreeLink Services</title>
+    <style>
+        :root {
+            --primary-color: #2c4a3a;
+            --secondary-color: #5a7f5e;
+            --accent-color: #8ba888;
+            --light-color: #f0f4ef;
+            --dark-color: #1a2e1f;
+            --text-color: #333;
+            --highlight-color: #c9e4ca;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1476231682824-1248f1a78905?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--light-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slogan {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        nav a[aria-current="page"] {
+            background-color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-point {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-point h3 {
+            color: var(--secondary-color);
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--dark-color);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .cookie-banner p {
+            margin-bottom: 0;
+            flex: 1;
+            padding-right: 1rem;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cookie-btn {
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .accept-btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+
+        .decline-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .accept-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .decline-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-contact {
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+
+            header {
+                min-height: 40vh;
+            }
+
+            .cookie-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-buttons {
+                margin-top: 1rem;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TreeLink Services</div>
+        <div class="slogan">"Guardians of your greens."</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li><a href="privacy.html" tabindex="0">Privacy</a></li>
+            <li><a href="terms.html" tabindex="0">Terms & conditions</a></li>
+            <li><a href="cookies.html" tabindex="0" aria-current="page">Cookies</a></li>
+            <li><a href="contact.html" tabindex="0">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="cookie-policy">
+            <h1>Cookie Policy</h1>
+            <p>Last Updated: June 1, 2023</p>
+            
+            <p>This Cookie Policy explains how TreeLink Services ("we", "us", or "our") uses cookies and similar technologies when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>
+            
+            <h2>What Are Cookies?</h2>
+            <p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.</p>
+            
+            <p>Cookies set by the website owner (in this case, TreeLink Services) are called "first party cookies". Cookies set by parties other than the website owner are called "third party cookies". Third party cookies enable third party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics).</p>
+            
+            <h2>Why Do We Use Cookies?</h2>
+            <p>We use first and third party cookies for several reasons. Some cookies are required for technical reasons in order for our website to operate, and we refer to these as "essential" or "strictly necessary" cookies. Other cookies enable us to track and target the interests of our users to enhance the experience on our website. Third parties serve cookies through our website for advertising, analytics, and other purposes.</p>
+            
+            <h2>Types of Cookies We Use</h2>
+            
+            <div class="contact-point">
+                <h3>1. Essential Website Cookies</h3>
+                <p>These cookies are strictly necessary to provide you with services available through our website and to use some of its features, such as access to secure areas. Because these cookies are strictly necessary to deliver the website, you cannot refuse them without impacting how our site functions. You can block or delete them by changing your browser settings, however, as described below.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>2. Performance and Functionality Cookies</h3>
+                <p>These cookies are used to enhance the performance and functionality of our website but are non-essential to their use. However, without these cookies, certain functionality may become unavailable. These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>3. Analytics and Customization Cookies</h3>
+                <p>These cookies collect information that is used either in aggregate form to help us understand how our website is being used or how effective our marketing campaigns are, or to help us customize our website for you. We use Google Analytics to help us analyze how users use the site.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>4. Advertising Cookies</h3>
+                <p>These cookies are used to make advertising messages more relevant to you. They perform functions like preventing the same ad from continuously reappearing, ensuring that ads are properly displayed for advertisers, and in some cases selecting advertisements that are based on your interests.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>5. Social Networking Cookies</h3>
+                <p>These cookies are used to enable you to share pages and content that you find interesting on our website through third party social networking and other websites. These cookies may also be used for advertising purposes too.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>6. Persistent Cookies</h3>
+                <p>Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser. We use both session and persistent cookies on our website to provide you with a more personal and interactive experience.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>7. Flash Cookies</h3>
+                <p>We may use Adobe Flash Player to deliver special content, such as video clips or animation. To improve your user experience, Local Shared Objects (commonly known as Flash cookies) are used to provide functions such as remembering your settings and preferences. Flash cookies are stored on your device, but they are managed through an interface different from the one provided by your web browser.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>8. Pixel Tags</h3>
+                <p>In addition to cookies, we may use other technologies like pixel tags (sometimes called "web beacons" or "clear GIFs") to collect information about your use of our website and your response to our emails. These are tiny graphic images placed on website pages or in our emails that allow us to determine whether you have performed a specific action.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>9. Device Information</h3>
+                <p>We may collect information about the device you're using to access our website, including the type of device, operating system, settings, unique device identifiers, and crash data. Whether we collect some or all of this information depends on what type of device you're using and its settings.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>10. Log Files</h3>
+                <p>Like many websites, we gather certain information automatically and store it in log files. This information includes IP addresses, browser type, Internet service provider (ISP), referring/exit pages, operating system, date/time stamp, and clickstream data. We use this information to analyze trends, administer the site, track users' movements around the site, and gather demographic information about our user base as a whole.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>11. Cookie Duration</h3>
+                <p>The length of time a cookie will stay on your computer or mobile device depends on whether it is a "persistent" or "session" cookie. Session cookies will only stay on your device until you stop browsing. Persistent cookies stay on your computer or mobile device until they expire or are deleted.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>12. First-Party Cookies</h3>
+                <p>First-party cookies are cookies set by the website you're visiting. Only that website can read them. In addition, a website might potentially use external services which also set their own cookies, known as third-party cookies.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>13. Third-Party Cookies</h3>
+                <p>Third-party cookies are cookies that are set by a website other than the one you are currently on. For example, we might have a Facebook "like" button on our site. That button will set a cookie that can be read by Facebook. That would be considered a third-party cookie.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>14. SameSite Cookies</h3>
+                <p>SameSite cookies let servers require that a cookie shouldn't be sent with cross-site requests, which provides some protection against cross-site request forgery attacks (CSRF). SameSite cookies are supported by Chrome, Firefox, Edge, and Opera, and are being implemented in other browsers.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>15. Secure Cookies</h3>
+                <p>A secure cookie is only sent to the server with an encrypted request over the HTTPS protocol. Even with Secure, sensitive information should never be stored in cookies, as they are inherently insecure and this flag can't offer real protection.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>16. HTTPOnly Cookies</h3>
+                <p>An HttpOnly cookie cannot be accessed by client-side APIs, such as JavaScript. This restriction eliminates the threat of cookie theft via cross-site scripting (XSS). However, the cookie remains vulnerable to cross-site tracing (XST) and cross-site request forgery (CSRF) attacks.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>17. Zombie Cookies</h3>
+                <p>Zombie cookies are cookies that are recreated after a user has deleted them. This is accomplished by a script storing the cookie's content in multiple locations, such as Flash Local shared objects, HTML5 Web storage, and other client-side storage locations, then recreating the cookie when any of the other storage locations survive deletion.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>18. Supercookies</h3>
+                <p>Supercookies are tracking cookies that are difficult to remove because they're stored in multiple places on your computer. They can be used to recreate a user's profile even after regular cookies have been deleted. We do not use supercookies on our website.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>19. Cookie Syncing</h3>
+                <p>Cookie syncing is a process that allows different advertising platforms to share information about users by matching cookies. This enables advertisers to target users across different platforms and websites. We may participate in cookie syncing with trusted advertising partners.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>20. Cookie Matching</h3>
+                <p>Cookie matching is a technique used to link different identifiers for the same user across different devices or platforms. This helps create a more complete picture of user behavior across multiple touchpoints. We may use cookie matching to improve our advertising effectiveness.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>21. Cookie Lifespan</h3>
+                <p>The lifespan of a cookie can vary significantly. Session cookies expire when you close your browser. Persistent cookies can have lifespans ranging from a few minutes to several years. We carefully consider the appropriate lifespan for each cookie we set based on its purpose.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>22. Cookie Domains</h3>
+                <p>The domain attribute in a cookie determines which websites can access that cookie. Cookies can be set for a specific domain or subdomain, or for a parent domain which makes them accessible to all subdomains. We set our cookies with appropriate domain restrictions to ensure proper functionality.</p>
+            </div>
+            
+            <div class="contact-point">
+                <h3>23. Cookie Path </h3>
+            <p>The path attribute in a cookie specifies the URL path that must exist in the requested URL for the browser to send the cookie header. This allows us to control which parts of our website can access specific cookies, enhancing security and functionality.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>24. Cookie Expiration</h3>
+            <p>Cookies can have expiration dates set by the server. Once a cookie reaches its expiration date, it is automatically deleted by the browser. We set expiration dates for our cookies based on their intended use, ensuring they remain valid only as long as necessary.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>25. Cookie Consent</h3>
+            <p>We require users to provide consent for the use of non-essential cookies. This is typically done through a cookie banner that appears when you first visit our website. You can accept or decline cookies based on your preferences.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>26. Managing Cookies</h3>
+            <p>You have the right to decide whether to accept or decline cookies. You can manage your cookie preferences through your browser settings. Most browsers allow you to refuse cookies or to alert you when cookies are being sent. However, if you choose to refuse cookies, you may not be able to use the full functionality of our website.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>27. Third-Party Cookies Management</h3>
+            <p>In addition to managing first-party cookies, you can also manage third-party cookies through your browser settings or by visiting the websites of third-party advertisers. Many third-party advertisers provide options to opt-out of targeted advertising.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>28. Cookie Policy Updates</h3>
+            <p>We may update our cookie policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We encourage you to review this policy periodically to stay informed about our use of cookies.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>29. Contact Us</h3>
+            <p>If you have any questions about our cookie policy or our use of cookies, please contact us at info@treelinkservices.com. We are happy to provide you with more information and address any concerns you may have.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>30. Cookie Policy Acceptance</h3>
+            <p>By using our website, you consent to the use of cookies in accordance with this cookie policy. If you do not agree to our use of cookies, you should adjust your browser settings accordingly or refrain from using our website.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>31. Cookie Preferences</h3>
+            <p>You can change your cookie preferences at any time by clicking on the cookie settings link in the footer of our website. This will allow you to revisit your choices regarding cookie usage.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>32. Cookie Security</h3>
+            <p>We take the security of your data seriously and implement appropriate technical and organizational measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or method of electronic storage is 100% secure.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>33. Cookie Compliance</h3>
+            <p>We strive to comply with all applicable laws and regulations regarding the use of cookies and similar technologies. This includes the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>34. User Rights</h3>
+            <p>As a user, you have rights regarding your personal data, including the right to access, correct, or delete your information. If you have any questions about your rights or how we handle your data, please contact us.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>35. Cookie Analytics</h3>
+            <p>We use cookies to analyze user behavior on our website, which helps us improve our services and user experience. This data is collected anonymously and is used to enhance our website's functionality and content.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>36. Cookie Retention</h3>
+            <p>We retain cookies for as long as necessary to fulfill the purposes for which they were collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>37. Cookie Transparency</h3>
+            <p>We are committed to transparency regarding our use of cookies. This cookie policy provides detailed information about the types of cookies we use, their purposes, and how you can manage your preferences.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>38. Cookie Third-Party Services</h3>
+            <p>We may use third-party services that set cookies on your device. These services may include analytics providers, advertising partners, and social media platforms. We encourage you to review their cookie policies for more information.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>39. Cookie User Experience</h3>
+            <p>Cookies play a crucial role in enhancing user experience on our website. They help us remember your preferences, provide personalized content, and improve site performance, making your visits more enjoyable.</p>
+        </div>
+        
+        <div class="contact-point">
+            <h3>40. Cookie Feedback</h3>
+            <p>We welcome your feedback regarding our cookie policy and practices. If you have any suggestions or concerns, please reach out to us. Your input helps us improve our services and better serve our users.</p>
+        </div>
+    </section>
+
+    <div class="cookie-banner">
+        <p>We use cookies to enhance your experience on our website. By clicking "Accept", you consent to our use of cookies. You can manage your preferences in your browser settings.</p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn accept-btn">Accept</button>
+            <button class="cookie-btn decline-btn">Decline</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 TreeLink Services. All rights reserved.</p>
+            <div class="footer-contact">
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>251 Mercer St, New York, NY 10012, USA</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>(123) 456-7890</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | TreeLink Services</title>
+    <style>
+        :root {
+            --primary-color: #2c4a3a;
+            --secondary-color: #5a7f5e;
+            --accent-color: #8ba888;
+            --light-color: #f0f4ef;
+            --dark-color: #1a2e1f;
+            --text-color: #333;
+            --highlight-color: #c9e4ca;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1476231682824-1248f1a78905?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--light-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slogan {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        nav a[aria-current="page"] {
+            background-color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-point {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .terms-point h3 {
+            color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-contact {
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+
+            header {
+                min-height: 40vh;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TreeLink Services</div>
+        <div class="slogan">"Guardians of your greens."</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li><a href="privacy.html" tabindex="0">Privacy</a></li>
+            <li><a href="terms.html" tabindex="0" aria-current="page">Terms & conditions</a></li>
+            <li><a href="cookies.html" tabindex="0">Cookies</a></li>
+            <li><a href="contact.html" tabindex="0">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="terms">
+            <h1>Terms & Conditions</h1>
+            <p>Last Updated: June 1, 2023</p>
+            
+            <p>Welcome to TreeLink Services! These Terms and Conditions ("Terms") govern your use of our website and services. By accessing or using our website, you agree to be bound by these Terms and our Privacy Policy. If you disagree with any part of these Terms, please do not use our website.</p>
+            
+            <p>We reserve the right to modify these Terms at any time. Any changes will be effective immediately upon posting on the website. Your continued use of the website after such changes constitutes your acceptance of the new Terms.</p>
+            
+            <div class="terms-point">
+                <h3>1. Service Description</h3>
+                <p>TreeLink Services provides professional arborist services including tree maintenance, removal, health assessments, and consulting services. Our website serves as an informational platform about our services and allows customers to request quotes and schedule appointments. All services are subject to availability and additional terms may apply.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>2. Eligibility</h3>
+                <p>By using our website and services, you represent that you are at least 18 years of age and have the legal capacity to enter into a binding contract. If you are accessing our services on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these Terms.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>3. Account Registration</h3>
+                <p>Certain features of our website may require account registration. You agree to provide accurate, current, and complete information during registration and to update such information as necessary. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>4. Service Requests</h3>
+                <p>Service requests made through our website constitute an offer to purchase services from TreeLink Services. All requests are subject to acceptance by our team based on availability and feasibility. We reserve the right to refuse or cancel any service request at our sole discretion, including due to pricing errors or safety concerns.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>5. Pricing and Payments</h3>
+                <p>All prices quoted on our website are estimates only and subject to change based on actual site conditions. Final pricing will be confirmed after an on-site assessment. Payment terms will be specified in your service agreement. We accept various payment methods as indicated during checkout, and you agree to pay all charges incurred under your account.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>6. Cancellation Policy</h3>
+                <p>Cancellations must be made at least 48 hours prior to scheduled service to avoid cancellation fees. Same-day cancellations or no-shows may be subject to a fee up to 50% of the estimated service cost. For emergency services, cancellation fees may apply if we are unable to reallocate our resources.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>7. Property Access</h3>
+                <p>You grant TreeLink Services personnel permission to enter your property at scheduled times to perform services. You are responsible for ensuring safe access to work areas and notifying us of any hazards, underground utilities, or special considerations. We may refuse service if conditions are deemed unsafe.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>8. Liability Limitations</h3>
+                <p>TreeLink Services carries appropriate insurance coverage for our operations. However, our liability for any claims related to our services is limited to the amount paid for those specific services. We are not liable for incidental, consequential, or punitive damages, or for issues arising from pre-existing conditions or acts of nature.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>9. Intellectual Property</h3>
+                <p>All content on our website, including text, graphics, logos, and images, is our property or the property of our licensors and is protected by copyright and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>10. User Conduct</h3>
+                <p>You agree not to use our website for any unlawful purpose or in any way that could damage our website or impair others' use of it. Prohibited activities include transmitting viruses, spamming, scraping data, or attempting to gain unauthorized access to our systems or other users' accounts.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>11. Third-Party Links</h3>
+                <p>Our website may contain links to third-party websites or services that are not owned or controlled by TreeLink Services. We have no control over and assume no responsibility for the content or practices of any third-party sites. Your use of third-party sites is at your own risk and subject to their terms.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>12. Disclaimer of Warranties</h3>
+                <p>Our website and services are provided "as is" without warranty of any kind, either express or implied. We do not guarantee that our website will be uninterrupted, secure, or error-free, or that results from our services will meet your expectations. Professional advice should not be substituted for our general informational content.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>13. Indemnification</h3>
+                <p>You agree to indemnify and hold harmless TreeLink Services and its affiliates from any claims, damages, or expenses arising from your use of our website or services, your violation of these Terms, or your infringement of any third-party rights. This includes reasonable attorneys' fees and costs.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>14. Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be resolved in the state or federal courts located in New York County, New York.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>15. Dispute Resolution</h3>
+                <p>Before filing any legal action, you agree to attempt to resolve disputes by contacting our customer service team. If unresolved, disputes will be settled through binding arbitration in New York, NY, under the rules of the American Arbitration Association, with each party bearing their own costs.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>16. Force Majeure</h3>
+                <p>We shall not be liable for any failure or delay in performance due to events beyond our reasonable control, including natural disasters, acts of government, labor disputes, pandemics, or other emergencies. In such cases, we may suspend or terminate services without liability.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>17. Severability</h3>
+                <p>If any provision of these Terms is found to be invalid or unenforceable by a court of competent jurisdiction, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>18. Entire Agreement</h3>
+                <p>These Terms, together with our Privacy Policy and any service agreements, constitute the entire agreement between you and TreeLink Services regarding your use of our website and services, superseding any prior agreements between you and us.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>19. Waiver</h3>
+                <p>Our failure to exercise or enforce any right or provision of these Terms shall not constitute a waiver of such right or provision. Any waiver of any provision of these Terms will be effective only if in writing and signed by an authorized representative of TreeLink Services.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>20. Assignment</h3>
+                <p>You may not assign or transfer these Terms or your rights under them without our prior written consent. We may assign these Terms or any rights under them without restriction. These Terms will bind and inure to the benefit of the parties and their permitted successors and assigns.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>21. Notices</h3>
+                <p>All notices required under these Terms shall be in writing and deemed given when delivered personally, by certified mail (return receipt requested), or by recognized overnight courier service. Electronic notices to you may be sent to the email address associated with your account.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>22. Feedback</h3>
+                <p>Any feedback, comments, or suggestions you provide regarding our website or services shall become our sole property. We may use such feedback without restriction or obligation to compensate you, and we are under no obligation to keep such feedback confidential.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>23. Service Modifications</h3>
+                <p>We reserve the right to modify or discontinue any service or feature at any time without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuance of our services or website features.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>24. Permits and Regulations</h3>
+                <p>Certain tree services may require permits from local authorities. While we typically handle permit applications for our services, you are responsible for ensuring all necessary permissions are obtained and for any associated costs unless otherwise agreed in writing.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>25. Environmental Compliance</h3>
+                 <p>We are committed to conducting our services in an environmentally responsible manner. We comply with all applicable environmental laws and regulations, including those related to waste disposal, emissions, and the protection of natural resources. You agree to cooperate with us in ensuring compliance with these standards during service execution.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>26. Safety Standards</h3>
+                <p>TreeLink Services adheres to strict safety standards to protect our employees, clients, and the public. You agree to follow all safety instructions provided by our team and to inform us of any potential hazards on your property. We reserve the right to halt services if safety concerns arise.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>27. Equipment and Tools</h3>
+                <p>We utilize professional-grade equipment and tools to perform our services efficiently and safely. You agree not to interfere with our equipment or personnel during service execution. Any damage to our equipment caused by your actions may result in additional charges.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>28. Service Guarantees</h3>
+                <p>We strive to provide high-quality services and customer satisfaction. If you are not satisfied with our services, please contact us within 48 hours of service completion. We will assess your concerns and may offer a remedy, which could include a re-service or partial refund at our discretion.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>29. Customer Responsibilities</h3>
+                <p>You are responsible for ensuring that the area where services will be performed is clear of obstacles and hazards. This includes removing vehicles, furniture, and any other items that may impede our work. Failure to do so may result in delays or additional charges.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>30. Communication</h3>
+                <p>We will communicate with you regarding service appointments, changes, and other important information via the contact details you provide. It is your responsibility to ensure that your contact information is accurate and up-to-date. We are not responsible for missed communications due to outdated contact information.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>31. Marketing and Promotions</h3>
+                <p>By using our services, you consent to receive promotional materials and communications from TreeLink Services. You may opt-out of marketing communications at any time by following the unsubscribe instructions provided in our emails or by contacting us directly.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>32. Privacy Policy</h3>
+                <p>Your use of our website and services is also governed by our Privacy Policy, which outlines how we collect, use, and protect your personal information. By agreeing to these Terms, you also acknowledge that you have read and understood our Privacy Policy.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>33. Electronic Communications</h3>
+                <p>By using our website and services, you consent to receive communications from us electronically. We will communicate with you via email or by posting notices on our website. You agree that all agreements, notices, disclosures, and other communications we provide to you electronically will satisfy any legal requirements.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>34. Third-Party Services</h3>
+                <p>We may partner with third-party service providers to enhance our offerings. These third parties may have their own terms and conditions, and we encourage you to review them before engaging with their services. We are not responsible for the actions or policies of third-party providers.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>35. User Content</h3>
+                <p>If you submit any content, feedback, or suggestions to us, you grant TreeLink Services a non-exclusive, royalty-free, perpetual, and worldwide license to use, reproduce, modify, and publish such content. We may use your feedback for marketing and promotional purposes without compensation to you.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>36. Changes to Services</h3>
+                <p>We reserve the right to change, suspend, or discontinue any aspect of our services at any time without notice. This includes the availability of any service, feature, or content. We will not be liable to you or any third party for any modification, suspension, or discontinuation of our services.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>37. Service Area</h3>
+                <p>Our services are available in specific geographic areas. We reserve the right to limit the availability of our services to certain locations. If you request services outside of our service area, we may decline your request or charge additional fees for travel.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>38. Service Reviews</h3>
+                <p>We encourage customers to leave reviews and feedback about our services. Reviews may be posted on our website or third-party platforms. We reserve the right to remove any reviews that we deem inappropriate or that violate our policies.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>39. Contact Information</h3>
+                <p>If you have any questions about these Terms or our services, please contact us at info@treelinkservices.com. We are committed to addressing your inquiries and providing assistance as needed.</p>
+            </div>
+            
+            <div class="terms-point">
+                <h3>40. Acknowledgment</h3>
+                <p>By using our website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree to these Terms, please refrain from using our website and services.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 TreeLink Services. All rights reserved.</p>
+            <div class="footer-contact">
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>251 Mercer St, New York, NY 10012, USA</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>(123) 456-7890</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

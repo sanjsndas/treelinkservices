@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | TreeLink Services</title>
+    <style>
+        :root {
+            --primary-color: #2c4a3a;
+            --secondary-color: #5a7f5e;
+            --accent-color: #8ba888;
+            --light-color: #f0f4ef;
+            --dark-color: #1a2e1f;
+            --text-color: #333;
+            --highlight-color: #c9e4ca;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1476231682824-1248f1a78905?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--light-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slogan {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        nav a[aria-current="page"] {
+            background-color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .privacy-point {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .privacy-point h3 {
+            color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-contact {
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+
+            header {
+                min-height: 40vh;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TreeLink Services</div>
+        <div class="slogan">"Guardians of your greens."</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" tabindex="0">Home</a></li>
+            <li><a href="privacy.html" tabindex="0" aria-current="page">Privacy</a></li>
+            <li><a href="terms.html" tabindex="0">Terms & conditions</a></li>
+            <li><a href="cookies.html" tabindex="0">Cookies</a></li>
+            <li><a href="contact.html" tabindex="0">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="privacy-policy">
+            <h1>Privacy Policy</h1>
+            <p>Last Updated: June 1, 2023</p>
+            
+            <p>TreeLink Services ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this privacy policy carefully.</p>
+            
+            <p>We reserve the right to make changes to this Privacy Policy at any time and for any reason. Any changes will be posted on this page with an updated revision date. Your continued use of our website after such modifications will constitute your acknowledgment of the modified Privacy Policy.</p>
+            
+            <div class="privacy-point">
+                <h3>1. Information We Collect</h3>
+                <p>We may collect personal information that you voluntarily provide to us when you register on our website, express an interest in obtaining information about us or our services, or otherwise contact us. The personal information we collect may include names, email addresses, phone numbers, and other similar contact data.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>2. How We Use Your Information</h3>
+                <p>We use personal information collected via our website to communicate with you, deliver services, improve our services, send administrative information, and protect against fraudulent activities. We may also use this information for other business purposes such as data analysis and identifying usage trends.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>3. Sharing Information with Third Parties</h3>
+                <p>We do not sell, rent, or lease your personal information to third parties. We may share data with trusted partners to help perform statistical analysis, send you email or postal mail, provide customer support, or arrange for deliveries. These third parties are prohibited from using your personal information except to provide these services.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>4. Tracking Technologies</h3>
+                <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. You can set your browser to refuse all or some browser cookies.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>5. Data Security</h3>
+                <p>We implement appropriate technical and organizational measures to maintain the safety of your personal information. Our security measures include encryption, access controls, and secure protocols. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>6. Data Retention</h3>
+                <p>We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies. Retention periods vary depending on the type of data and purpose.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>7. User Rights</h3>
+                <p>Depending on your location, you may have certain rights regarding your personal information, including the right to access, correct, or delete your data. You may also have the right to restrict or object to certain processing activities. To exercise these rights, please contact us using the information provided below.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>8. Children's Privacy</h3>
+                <p>Our website and services are not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If we discover that a child under 13 has provided us with personal information, we will immediately delete such information from our servers.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>9. International Transfers</h3>
+                <p>Your information, including personal data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those from your jurisdiction. We will take all steps reasonably necessary to ensure your data is treated securely.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>10. Links to Other Websites</h3>
+                <p>Our website may contain links to other websites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the privacy policy of every site you visit. We have no control over and assume no responsibility for the content or practices of any third-party sites.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>11. GDPR Compliance</h3>
+                <p>For users in the European Economic Area (EEA), we process personal data in compliance with the General Data Protection Regulation (GDPR). We act as a data controller and processor as defined under GDPR. Our legal basis for collecting and processing personal data includes consent, contract performance, legal obligation, and legitimate interests.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>12. CCPA Compliance</h3>
+                <p>For California residents, we comply with the California Consumer Privacy Act (CCPA). California residents have the right to request access to their personal data, request deletion, and opt out of the sale of their personal information. We do not sell personal information as defined under CCPA.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>13. Privacy by Design</h3>
+                <p>We implement privacy by design principles in our systems and processes. This means we consider privacy at the initial design stage and throughout the complete development process of our services. We implement appropriate technical and organizational measures to protect personal data by default.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>14. Marketing Communications</h3>
+                <p>You may opt-out of receiving marketing communications from us by following the unsubscribe link or instructions provided in any email we send or by contacting us. We will remove you from our marketing lists, though we may still need to send you service-related communications.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>15. Third-Party Processors</h3>
+                <p>We engage certain third-party companies and individuals to facilitate our services, provide services on our behalf, perform service-related services or assist us in analyzing how our service is used. These third parties have access to your personal information only to perform these tasks on our behalf.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>16. Business Transfers</h3>
+                <p>In the event of a merger, acquisition, reorganization, bankruptcy or other sale of all or a portion of our assets, your personal information may be among the transferred assets. We will notify you via email and/or prominent notice on our website before your information is transferred.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>17. Automated Decision-Making</h3>
+                <p>We do not use fully automated decision-making that would produce legal effects concerning you or similarly significantly affect you. If this changes in the future, we will provide information about the logic involved and the significance and envisaged consequences of such processing.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>18. Data Protection Officer</h3>
+                <p>We have appointed a Data Protection Officer (DPO) who is responsible for overseeing questions in relation to this privacy policy. If you have any questions about this privacy policy, including any requests to exercise your legal rights, please contact our DPO using the details provided below.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>19. Data Breach Notification</h3>
+                <p>In the event of a data breach that is likely to result in a risk to your rights and freedoms, we will notify you and any applicable regulator of a breach where we are legally required to do so. Our breach notification procedures have been designed to comply with applicable laws and regulations.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>20. Sensitive Data</h3>
+                <p>We do not collect any "special categories" of personal data (as defined under the GDPR) through our website. This includes details about your race or ethnicity, religious or philosophical beliefs, political opinions, trade union membership, health, or sexual orientation.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>21. User Responsibilities</h3>
+                <p>You are responsible for ensuring that any personal data you submit through our website is accurate and complete. You should inform us of any changes to the information you have provided to us. You are also responsible for maintaining the confidentiality of any passwords or account credentials.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>22. Legal Compliance</h3>
+                <p>We may disclose your personal information where required to do so by law or in response to valid requests by public authorities (e.g., a court or government agency). This includes meeting national security or law enforcement requirements.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>23. Information Accuracy</h3>
+                <p>We endeavor to ensure that the personal information we hold about you is accurate and up-to-date. Please keep us informed of any changes to your personal data. We will respond to your request to correct any inaccurate or incomplete data within a reasonable timeframe.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>24. Data Minimization</h3>
+                <p>We collect only the personal data necessary for the purposes for which it is processed. The personal data we collect is adequate, relevant and limited to what is necessary in relation to our legitimate business purposes and legal obligations.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>25. Storage Limitations</h3>
+                <p>We store personal data in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the personal data was collected. Some data may be stored longer as required by law or for legitimate business purposes such as financial record keeping.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>26. Employee Training</h3>
+                <p>We provide regular privacy and security training to our employees who handle personal data. Employees are instructed to access personal data only when necessary for legitimate business purposes and to follow our data protection policies at all times.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>27. Vendor Management</h3>
+                <p>We carefully select third-party vendors that process personal data on our behalf. We require vendors to implement appropriate security measures and only process data in accordance with our documented instructions. We assess vendor security practices before engagement and periodically thereafter.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>28. Data Subject Requests</h3>
+                <p>We have established procedures for responding to data subject requests to exercise rights under applicable privacy laws. Requests can be submitted via email or through our website. We aim to respond to all legitimate requests within one month, though this period may be extended for complex requests.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>29. Privacy Impact Assessments</h3>
+                <p>We conduct Privacy Impact Assessments for high-risk processing activities to assess and mitigate risk to data subjects. These assessments consider the nature, scope, context and purposes of processing as well as risks to data subjects' rights and freedoms.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>30. Data Accuracy </h3>
+                <p>We take reasonable steps to ensure that the personal data we process is accurate, complete, and up-to-date. This includes verifying the accuracy of data at the point of collection and periodically reviewing the data we hold to ensure its accuracy.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>31. Data Protection by Default</h3>
+                <p>We implement data protection by default measures to ensure that only personal data necessary for each specific purpose of processing is processed. This includes limiting access to personal data to only those employees and third parties who need it for legitimate business purposes.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>32. Data Breach Response Plan</h3>
+                <p>We have established a data breach response plan to ensure that we can respond effectively to any data breaches. This plan includes procedures for identifying, reporting, and investigating breaches, as well as notifying affected individuals and regulatory authorities when required.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>33. Privacy Notices</h3>
+                <p>We provide clear and concise privacy notices to inform individuals about how their personal data will be used. These notices are provided at the point of data collection and include information about the purposes of processing, data retention, and individuals' rights.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>34. Data Protection Audits</h3>
+                <p>We conduct regular audits of our data protection practices to ensure compliance with applicable laws and regulations. These audits help us identify areas for improvement and ensure that we are effectively managing personal data.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>35. Privacy Policy Updates</h3>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We encourage you to review this policy periodically to stay informed about our privacy practices.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>36. Contact Information</h3>
+                <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at info@treelinkservices.com. We are committed to addressing your concerns and providing you with the information you need.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>37. Complaints</h3>
+                <p>If you believe that we have not complied with your data protection rights, you have the right to lodge a complaint with a supervisory authority. We encourage you to contact us first to resolve any issues before escalating to a regulatory body.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>38. Data Processing Agreements</h3>
+                <p>We enter into data processing agreements with third parties that process personal data on our behalf. These agreements outline the responsibilities of each party regarding data protection and ensure compliance with applicable laws.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>39. Data Transfer Mechanisms</h3>
+                <p>When transferring personal data outside of the European Economic Area (EEA), we ensure that appropriate safeguards are in place, such as Standard Contractual Clauses or other legal mechanisms, to protect your data in accordance with applicable laws.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3>40. User Consent</h3>
+                <p>We obtain user consent for processing personal data where required by law. This includes obtaining explicit consent for processing sensitive data and providing users with clear options to withdraw consent at any time.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 TreeLink Services. All rights reserved.</p>
+            <div class="footer-contact">
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>251 Mercer St, New York, NY 10012, USA</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>(123) 456-7890</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

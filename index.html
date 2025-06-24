@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TreeLink Services | Guardians of Your Greens</title>
+    <style>
+        :root {
+            --primary-color: #2c4a3a;
+            --secondary-color: #5a7f5e;
+            --accent-color: #8ba888;
+            --light-color: #f0f4ef;
+            --dark-color: #1a2e1f;
+            --text-color: #333;
+            --highlight-color: #c9e4ca;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1476231682824-1248f1a78905?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--light-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slogan {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        nav a[aria-current="page"] {
+            background-color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonial {
+            background-color: var(--highlight-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--secondary-color);
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            line-height: 1;
+            opacity: 0.3;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            text-align: right;
+        }
+
+        .tips-list {
+            list-style-type: none;
+        }
+
+        .tips-list li {
+            background-color: var(--light-color);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .disclaimer {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-left: 4px solid #dc3545;
+            margin: 2rem 0;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+
+            header {
+                min-height: 40vh;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TreeLink Services</div>
+        <div class="slogan">"Guardians of your greens."</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" tabindex="0"aria-current="page">Home</a></li>
+            <li><a href="privacy.html" tabindex="0">Privacy</a></li>
+            <li><a href="terms.html" tabindex="0" >Terms & conditions</a></li>
+            <li><a href="cookies.html" tabindex="0">Cookies</a></li>
+            <li><a href="contact.html" tabindex="0">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h1>About TreeLink Services</h1>
+            <p>Founded in 2005, TreeLink Services has grown from a small local arborist team to a premier tree care provider serving the New York metropolitan area. What began as a passionate initiative by a group of tree care enthusiasts has evolved into a trusted name in arboriculture, known for delivering exceptional service, scientific expertise, and environmentally responsible solutions.
+
+Over the years, TreeLink Services has expanded its reach and capabilities while staying true to its core values: integrity, safety, sustainability, and community. Today, our dedicated team of certified arborists, horticultural specialists, and tree risk assessment professionals brings together over 200 years of combined experience in tree maintenance, preservation, and landscape enhancement. This collective knowledge enables us to handle projects of every scale—from residential tree pruning and plant health care to large-scale municipal tree inventories and commercial land development consulting.
+
+Our services encompass a full range of tree care solutions, including precision pruning, tree removal, stump grinding, soil conditioning, pest and disease management, cabling and bracing, and emergency storm response. We also specialize in tree preservation planning, root zone protection, and construction impact mitigation for developers, engineers, and city planners.
+
+At TreeLink Services, we don’t just maintain trees—we steward urban forests. Our team is committed to using the latest industry standards and technologies, including GIS-based tree mapping, aerial assessments, and organic treatment plans that prioritize the long-term health of trees and surrounding ecosystems.</p>
+            
+            <div class="image-gallery">
+                <img src="p1.jpeg" alt="Our team working on tree care">
+                <img src="p2.jpeg" alt="Beautiful garden maintained by our team">
+                <img src="p3.jpeg" alt="Certified arborist examining a tree">
+            </div>
+            
+            <p>Our philosophy centers on sustainable tree care that respects both the urban environment and natural ecosystems. We believe that trees are living investments that provide immeasurable value to properties and communities. That's why we've developed our proprietary TreeLife™ maintenance program, which has shown a 92% success rate in extending tree lifespan by an average of 15-20 years.</p>
+            
+            <p>What sets TreeLink apart is our commitment to education. Each of our specialists completes 120 hours of annual training in the latest arboricultural techniques, pest management strategies, and safety protocols. We're proud to have been awarded the Urban Tree Care Excellence Award for five consecutive years.</p>
+        </section>
+
+        <section id="services">
+            <h1>Our Comprehensive Tree Services</h1>
+            <p>TreeLink Services offers a complete range of professional tree care solutions tailored to your property's specific needs. From routine maintenance to emergency services, our certified arborists provide expert care with the highest safety standards.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="s1.jpeg" alt="Tree Pruning Service">
+                    <h3>Professional Pruning</h3>
+                    <p>Our certified arborists perform precision pruning using ANSI A300 standards to enhance tree health, structure, and aesthetics. We offer crown cleaning, thinning, raising, and reduction services tailored to each tree's species and growth pattern.</p>
+                </div>
+                
+                <div class="service-card">
+                    <img src="s2.jpeg" alt="Tree Removal Service">
+                    <h3>Safe Tree Removal</h3>
+                    <p>When removal is necessary, our team employs advanced rigging techniques and state-of-the-art equipment to complete the job safely and efficiently, with minimal impact to your property. We include complete stump grinding and site cleanup.</p>
+                </div>
+                
+                <div class="service-card">
+                    <img src="s3.jpeg" alt="Tree Health Assessment">
+                    <h3>Tree Health Assessments</h3>
+                    <p>Our comprehensive diagnostic services include soil analysis, pest identification, and disease detection using the latest arboricultural technology. We provide detailed reports with treatment recommendations to restore and maintain tree vitality.</p>
+                </div>
+                
+                <div class="service-card">
+                    <img src="s4.jpeg" alt="Emergency Tree Services">
+                    <h3>24/7 Emergency Services</h3>
+                    <p>Storm-damaged or hazardous trees require immediate attention. Our emergency response team is available around the clock with the equipment and expertise to safely address urgent tree situations and prevent further property damage.</p>
+                </div>
+                
+                <div class="service-card">
+                    <img src="s5.jpeg" alt="Tree Planting Service">
+                    <h3>Expert Tree Planting</h3>
+                    <p>Proper planting is crucial for long-term tree health. Our arborists select species suited to your site conditions and employ best practices for installation, including root ball preparation, proper depth placement, and structural support when needed.</p>
+                </div>
+                
+                <div class="service-card">
+                    <img src="s6.jpeg" alt="Tree Preservation">
+                    <h3>Tree Preservation</h3>
+                    <p>For construction projects, we implement protective measures to safeguard existing trees, including root zone protection, canopy management, and post-construction recovery programs to minimize stress and ensure continued health.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="consulting">
+            <h1>Arborist Consultation Services</h1>
+            <p>Our team of certified consulting arborists offers comprehensive and expert guidance tailored for property owners, developers, landscape architects, municipalities, and other stakeholders navigating complex tree-related challenges. With advanced credentials and years of field experience, our consultants specialize in the science and strategy of urban forestry, tree health management, and regulatory compliance.
+
+We understand that trees are not only valuable environmental assets but also critical components of long-term property planning and community well-being. Whether you’re preparing a site for new construction, assessing the safety and stability of mature trees, or designing a landscape that promotes biodiversity, our arborists are equipped to support your goals with precision and care.
+
+Our services are rooted in a deep commitment to balancing human development with environmental responsibility. We offer expert tree risk assessments, tree inventories, health evaluations, preservation plans, and permit guidance—all grounded in best practices and current arboricultural standards.
+
+By working closely with planners, engineers, and municipal agencies, we ensure that tree protection is integrated early in the design process, reducing costly delays and mitigating ecological impact. From evaluating the impact of a proposed development to guiding tree replacement strategies in sensitive ecosystems, we provide solutions that harmonize growth with green infrastructure.
+
+Ultimately, our mission is to foster landscapes that thrive—both functionally and ecologically—by championing tree preservation, sustainable design, and long-term canopy health..</p>
+            
+            
+            <h2>Development Project Consulting</h2>
+            <p>For construction projects, our arborists conduct pre-development tree inventories and impact assessments to help navigate municipal tree ordinances. We create comprehensive tree protection plans that meet regulatory requirements while preserving valuable specimens through all phases of construction.</p>
+            
+            <h2>Tree Risk Assessment</h2>
+            <p>Using TRAQ (Tree Risk Assessment Qualification) methodologies, we evaluate structural integrity and failure potential for trees in high-traffic areas. Our reports include risk ratings, mitigation options, and monitoring recommendations to help property managers make informed decisions about hazardous trees.</p>
+            
+            <h2>Tree Valuation & Appraisal</h2>
+            <p>For insurance claims, legal disputes, or property valuation purposes, our arborists perform detailed tree appraisals using the latest version of the Guide for Plant Appraisal. We document species, condition, location, and replacement costs to establish fair market value for damaged or removed trees.</p>
+            
+            <h2>Municipal Forestry Consulting</h2>
+            <p>We assist communities with urban forest management plans, street tree inventories, and canopy cover analysis. Our data-driven approach helps municipalities maximize the environmental and economic benefits of their public trees while managing limited maintenance budgets.</p>
+            
+            <h2>Heritage Tree Programs</h2>
+            <p>For properties with significant or historic trees, we develop customized preservation plans that may include advanced support systems, growth regulation treatments, and specialized soil management to extend the life of these valuable community assets.</p>
+        </section>
+
+        <section id="testimonials">
+            <h1>What Our Clients Say</h1>
+            <div class="testimonial">
+                <p>"TreeLink Services saved our century-old oak that was declining after a construction project next door. Their root zone revitalization treatment and careful monitoring brought it back to full health. Two years later, it's thriving like never before!"</p>
+                <div class="testimonial-author">— Margaret T., Greenwich Village</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"As a property manager with hundreds of trees across multiple buildings, I rely on TreeLink's comprehensive care program. Their proactive approach has reduced our emergency callouts by 75% and significantly improved our landscape aesthetics . I highly recommend their services!"</p>
+                <div class="testimonial-author">— James R., Manhattan</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"The team at TreeLink is incredibly knowledgeable and professional. They provided a thorough assessment of our trees and helped us implement a long-term care plan that has made a noticeable difference in our property’s health and appearance."</p>
+                <div class="testimonial-author">— Sarah L., Brooklyn</div>
+            </div>
+        </section>
+
+        <section id="tips">
+            <h1>Tree Care Tips</h1>
+            <ul class="tips-list">
+                <li>Regularly inspect your trees for signs of disease or damage.</li>
+                <li>Water your trees deeply during dry spells to promote healthy root growth.</li>
+                <li>Mulch around the base of trees to retain moisture and suppress weeds.</li>
+                <li>Prune dead or diseased branches to prevent further damage.</li>
+                <li>Consult with a certified arborist for any major tree care decisions.</li>
+            </ul>
+        </section>
+
+        <section id="disclaimer">
+            <div class="disclaimer">
+                <h2>Disclaimer</h2>
+                <p>The information provided on this website is for general informational purposes only and should not be considered professional advice. Always consult with a qualified arborist for specific tree care needs.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>251 Mercer St, New York, NY 10012, USA</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@treelinkservices.com</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 TreeLink Services. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>Customer satisfaction is our priority. We strive to exceed your expectations with every service.</p>
+        </div>
+    </footer>
+</body>
+</html>
